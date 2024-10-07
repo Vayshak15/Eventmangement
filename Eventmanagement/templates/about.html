@@ -1,0 +1,94 @@
+{% extends  'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Header -->
+    <header class="jumbotron jumbotron-fluid bg-light">
+        <div class="container text-center">
+            <h1 class="display-4">About Event Management</h1>
+            <p class="lead">Creating Unforgettable Experiences Since 2010</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>Our Story</h2>
+                <p>EventPro Management was founded in 2010 with a vision to transform ordinary gatherings into extraordinary experiences. With over a decade of expertise, we've successfully orchestrated a wide range of events, from intimate weddings to large-scale corporate conferences.</p>
+                <p>Our passionate team of event professionals brings creativity, attention to detail, and flawless execution to every project. We believe that each event is unique and deserves a tailored approach to bring our clients' visions to life.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'images/eventlg.jpg' %}">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Expertise</h2>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="event-icon">🎉</div>
+                    <h4>Corporate Events</h4>
+                    <p>Conferences, product launches, team building, and more.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="event-icon">💍</div>
+                    <h4>Weddings</h4>
+                    <p>From intimate ceremonies to grand celebrations.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="event-icon">🎭</div>
+                    <h4>Social Gatherings</h4>
+                    <p>Birthday parties, anniversaries, and special occasions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="container my-5">
+        <h2 class="text-center mb-5">Meet Our Team</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/c1.jpg' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">Jane Doe</h5>
+                        <p class="card-text">Founder & Creative Director</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/c2.jpg' %}" alt="Team Member 2">
+                    <div class="card-body">
+                        <h5 class="card-title">John Smith</h5>
+                        <p class="card-text">Event Coordinator</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/c3.jpg' %}" class="card-img-top" alt="Team Member 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Emily Brown</h5>
+                        <p class="card-text">Marketing Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-primary text-white py-5">
+        <div class="container text-center">
+            <h2>Ready to Create Your Perfect Event?</h2>
+            <p class="lead">Let's bring your vision to life!</p>
+            <a href="{% url 'contact' %}" class="btn btn-light btn-lg mt-3">Contact Us Today</a>
+        </div>
+    </section>
+<br>
+<br>
+{% endblock %}

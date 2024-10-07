@@ -1,0 +1,113 @@
+{% extends  'base.html' %}
+{% load static %}
+{% block content %}
+ <div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/event1.jpg' %}" alt="Los Angeles" width="1100" height="50">
+      <div class="carousel-caption">
+        <h3>Enjoy the festival mood</h3>
+        <p>Get ready for festivals!</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/event2.jpg' %}" alt="Chicago" width="1100" height="50">
+      <div class="carousel-caption">
+        <h3>Enjoy the parties</h3>
+        <p>Special party offers!</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/food.jpg' %}" alt="New york" width="1100" height="50">
+      <div class="carousel-caption">
+        <h3>Explore the taste</h3>
+        <p>Enjoy various cuisines</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+ <main class="container my-5">
+        <section class="mb-5">
+            <h2 class="text-center mb-4">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card h-100">
+                        <img src="{% static 'images/cevent.jpg' %}" class="card-img-top" alt="Corporate Events">
+                        <div class="card-body">
+                            <h5 class="card-title">Corporate Events</h5>
+                            <p class="card-text">From conferences to team-building activities, we've got your corporate needs covered.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card h-100">
+                        <img src="{% static 'images/wedding.jpg' %}" class="card-img-top" alt="Weddings">
+                        <div class="card-body">
+                            <h5 class="card-title">Weddings</h5>
+                            <p class="card-text">Let us make your special day truly unforgettable with our expert planning and execution.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card h-100">
+                        <img src="{% static 'images/social.jpg' %}" alt="Social Gatherings">
+                        <div class="card-body">
+                            <h5 class="card-title">Social Gatherings</h5>
+                            <p class="card-text">From birthdays to reunions, we'll ensure your social event is a hit with all attendees.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="text-center mb-4">Why Choose Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-group">
+                        <li class="list-group-item">Professional and experienced team</li>
+                        <li class="list-group-item">Tailored solutions for every event</li>
+                        <li class="list-group-item">Attention to detail and flawless execution</li>
+                        <li class="list-group-item">Competitive pricing and transparent quotes</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <p>With years of experience in the industry, our team of expert event planners is dedicated to bringing your vision to life. We handle every aspect of your event, allowing you to relax and enjoy the occasion.</p>
+                    <a href="{% url 'about' %}" class="btn btn-success">Learn More About Us</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-center mb-4">Testimonials</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0">"The team at Event Management made our corporate retreat a huge success. Highly recommended!"</p>
+                            <footer class="blockquote-footer">John Doe, <cite title="Source Title">CEO of TechCorp</footer>
+                        </blockquote>
+                    </div>
+                    <div class="carousel-item">
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0">"Our wedding day was perfect thanks to the incredible planning and coordination by Event Management."</p>
+                            <footer class="blockquote-footer">Jane Smith, <cite title="Source Title">Happy Bride</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
